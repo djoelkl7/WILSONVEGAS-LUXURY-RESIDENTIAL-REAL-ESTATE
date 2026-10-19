@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-espresso: #241713;
+    --color-chocolate: #3B241B;
+    --color-champagne: #C6A77A;
+    --color-champagne-light: #E0C7A4;
+    --color-ivory: #F7F4F0;
+    --color-bronze: #8C5E3C;
+  }
+
+  body {
+    background-color: #241713;
+    color: #F7F4F0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: 0.02em;
+  }
+
+  /* Prevent auto-zoom on iOS by enforcing 16px font-size minimum on all inputs */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Custom Luxury Gradients */
+.bg-brown-gradient {
+  background: linear-gradient(135deg, #241713 0%, #3B241B 45%, #6B4634 85%, #8C5E3C 100%);
+}
+
+.bg-brown-gradient-subtle {
+  background: linear-gradient(180deg, rgba(36, 23, 19, 0.95) 0%, rgba(59, 36, 27, 0.92) 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #241713;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6B4634;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C6A77A;
+}
+
+/* Accessible focus visible rings */
+:focus-visible {
+  outline: 2px solid #C6A77A;
+  outline-offset: 3px;
+}
+
+/* Print-Friendly Styles for Executed Contract Certificate */
+@media print {
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  header, footer, nav, button, .no-print {
+    display: none !important;
+  }
+
+  .print-only-certificate {
+    display: block !important;
+    border: 2px solid #000000 !important;
+    box-shadow: none !important;
+    padding: 24px !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}

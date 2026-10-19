@@ -1,0 +1,6 @@
+{
+  "name": "Interactive Homepage Storyteller",
+  "description": "An interactive, accessible, mobile-first business homepage and visual storytelling experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
